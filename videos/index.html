@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>فيديوهات تعليمية</title>
+  <style>
+    body { font-family: Arial; direction: rtl; background: #f5f5f5; padding: 20px; }
+    h2 { color: #333; }
+    .video-section { margin-bottom: 40px; }
+    iframe { width: 100%; height: 315px; border: none; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>فيديوهات تعليمية لكل الأطوار</h1>
+
+  <div class="video-section">
+    <h2>الطور الابتدائي - الرياضيات</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+  </div>
+
+  <div class="video-section">
+    <h2>الطور المتوسط - العلوم الطبيعية</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+  </div>
+
+  <div class="video-section">
+    <h2>الطور الثانوي - الفيزياء</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فيديوهات تعليمية</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .search-box {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .video {
+      margin: 20px 0;
+      display: inline-block;
+      width: 100%;
+      max-width: 560px;
+    }
+  </style>
+  <script>
+    function filterVideos() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const videos = document.querySelectorAll(".video");
+
+      videos.forEach(video => {
+        const title = video.getAttribute("data-title").toLowerCase();
+        video.style.display = title.includes(query) ? "block" : "none";
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <h1>فيديوهات تعليمية</h1>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" onkeyup="filterVideos()" placeholder="ابحث عن درس...">
+  </div>
+
+  <div class="video" data-title="الدرس الأول في الرياضيات">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+    <p>الدرس الأول في الرياضيات</p>
+  </div>
+
+  <div class="video" data-title="مقدمة في اللغة العربية">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+    <p>مقدمة في اللغة العربية</p>
+  </div>
+
+  <div class="video" data-title="قواعد النحو الأساسية">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe>
+    <p>قواعد النحو الأساسية</p>
+  </div>
+
+</body>
+</html>
+0
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>فيديوهات تعليمية</title>
+  <style>
+    body { font-family: Arial; direction: rtl; text-align: right; background: #f2f2f2; padding: 20px; }
+    h2 { color: #333; }
+    input[type="text"] { width: 100%; padding: 10px; margin-bottom: 20px; font-size: 16px; }
+    .video-section { margin-bottom: 40px; }
+    .video { margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>فيديوهات تعليمية لجميع المستويات</h1>
+  
+  <input type="text" id="searchBox" placeholder="ابحث عن درس أو مستوى..." onkeyup="searchVideos()">
+
+  <div id="videos">
+
+    <div class="video-section">
+      <h2>السنة الأولى متوسط</h2>
+      <div class="video"><a href="https://www.youtube.com/watch?v=VIDEO_ID1" target="_blank">درس 1: الكسور</a></div>
+      <div class="video"><a href="https://www.youtube.com/watch?v=VIDEO_ID2" target="_blank">درس 2: الزوايا</a></div>
+    </div>
+
+    <div class="video-section">
+      <h2>السنة الثانية متوسط</h2>
+      <div class="video"><a href="https://www.youtube.com/watch?v=VIDEO_ID3" target="_blank">درس 1: المعادلات</a></div>
+      <div class="video"><a href="https://www.youtube.com/watch?v=VIDEO_ID4" target="_blank">درس 2: القوى</a></div>
+    </div>
+
+  </div>
+
+  <script>
+    function searchVideos() {
+      let input = document.getElementById("searchBox").value.toLowerCase();
+      let videos = document.querySelectorAll(".video");
+      videos.forEach(v => {
+        v.style.display = v.textContent.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>
+0
+X
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>فيديوهات تعليمية - الطور المتوسط</title>
+  <style>
+    body { font-family: Arial; direction: rtl; background: #f4f4f4; padding: 20px; }
+    h1, h2 { text-align: center; color: #333; }
+    input[type="text"] { width: 100%; padding: 10px; font-size: 16px; margin-bottom: 20px; }
+    .video { margin-bottom: 30px; display: block; }
+    iframe { width: 100%; height: 315px; border: none; }
+  </style>
+</head>
+<body>
+
+  <h1>فيديوهات تعليمية للطور المتوسط</h1>
+  <input type="text" id="searchBox" placeholder="ابحث عن مادة أو درس..." onkeyup="searchVideos()">
+
+  <div id="videoContainer">
+    
+    <div class="video">
+      <h2>اللغة العربية - الممنوع من الصرف</h2>
+      <iframe src="https://www.youtube.com/embed/Y7dOBArhR30" allowfullscreen></iframe>
+    </div>
+
+    <div class="video">
+      <h2>الرياضيات - مراجعة شاملة</h2>
+      <iframe src="https://www.youtube.com/embed/sBoBb7dQCSs" allowfullscreen></iframe>
+    </div>
+
+    <div class="video">
+      <h2>الفيزياء - فرض الفصل الثاني</h2>
+      <iframe src="https://www.youtube.com/embed/UpdncVjjdKQ" allowfullscreen></iframe>
+    </div>
+
+    <!-- يمكنك إضافة المزيد من الفيديوهات بنفس الطريقة -->
+
+  </div>
+
+  <script>
+    function searchVideos() {
+      let input = document.getElementById("searchBox").value.toLowerCase();
+      let videos = document.querySelectorAll(".video");
+      videos.forEach(v => {
+        v.style.display = v.textContent.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
+0
+0
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>فيديوهات تعليمية للطور المتوسط</title>
+  <style>
+    body { font-family: Arial; direction: rtl; background: #f9f9f9; padding: 20px; }
+    h1, h2, h3 { color: #333; text-align: center; }
+    .year-section { background: #fff; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .video { margin: 15px 0; }
+    iframe { width: 100%; height: 315px; border: none; }
+    input[type="text"] { width: 100%; padding: 10px; margin-bottom: 20px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+<h1>فيديوهات تعليمية حسب المستوى والمواد</h1>
+<input type="text" id="searchBox" placeholder="ابحث عن مادة أو درس..." onkeyup="searchVideos()">
+
+<!-- السنة الأولى متوسط -->
+<div class="year-section">
+  <h2>السنة الأولى متوسط</h2>
+
+  <h3>اللغة العربية</h3>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/Y7dOBArhR30" allowfullscreen></iframe>
+  </div>
+
+  <h3>الرياضيات</h3>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/U9xyWiBH8qk" allowfullscreen></iframe>
+  </div>
+
+  <h3>الفيزياء</h3>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/UpdncVjjdKQ" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- السنة الثانية متوسط -->
+<div class="year-section">
+  <h2>السنة الثانية متوسط</h2>
+
+  <h3>اللغة العربية</h3>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/A54vrJbFObk" allowfullscreen></iframe>
+  </div>
+
+  <h3>الرياضيات</h3>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/sBoBb7dQCSs" allowfullscreen></iframe>
+  </div>
+
+  <h3>الفيزياء</h3>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/8bn652I_MNI" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- يمكنك إضافة 3 متوسط و4 متوسط بنفس الطريقة -->
+
+<script>
+  function searchVideos() {
+    let input = document.getElementById("searchBox").value.toLowerCase();
+    let videos = document.querySelectorAll(".year-section");
+    videos.forEach(section => {
+      section.style.display = section.textContent.toLowerCase().includes(input) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>
+9
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>فيديوهات تعليمية - الطور المتوسط</title>
+  <style>
+    body { font-family: Arial; direction: rtl; margin: 0; background: #f4f4f4; }
+    .container { display: flex; }
+    .sidebar {
+      width: 200px;
+      background: #2c3e50;
+      color: white;
+      min-height: 100vh;
+      padding: 20px 10px;
+      position: fixed;
+    }
+    .sidebar h2 { font-size: 20px; margin-bottom: 10px; text-align: center; }
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-bottom: 1px solid #34495e;
+    }
+    .sidebar a:hover {
+      background: #1abc9c;
+    }
+
+    .content {
+      margin-right: 220px;
+      padding: 20px;
+    }
+
+    h1, h2, h3 { color: #333; }
+    .year-section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .video { margin: 15px 0; }
+    iframe { width: 100%; height: 315px; border: none; }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="sidebar">
+    <h2>السنوات</h2>
+    <a href="#year1">السنة 1 متوسط</a>
+    <a href="#year2">السنة 2 متوسط</a>
+    <a href="#year3">السنة 3 متوسط</a>
+    <a href="#year4">السنة 4 متوسط</a>
+  </div>
+
+  <div class="content">
+    <h1>فيديوهات تعليمية للطور المتوسط</h1>
+    <input type="text" id="searchBox" placeholder="ابحث عن مادة أو درس..." onkeyup="searchVideos()">
+
+    <!-- السنة 1 -->
+    <div class="year-section" id="year1">
+      <h2>السنة الأولى متوسط</h2>
+      <h3>اللغة العربية</h3>
+      <div class="video"><iframe src="https://www.youtube.com/embed/Y7dOBArhR30" allowfullscreen></iframe></div>
+      <h3>الرياضيات</h3>
+      <div class="video"><iframe src="https://www.youtube.com/embed/U9xyWiBH8qk" allowfullscreen></iframe></div>
+      <h3>الفيزياء</h3>
+      <div class="video"><iframe src="https://www.youtube.com/embed/UpdncVjjdKQ" allowfullscreen></iframe></div>
+    </div>
+
+    <!-- السنة 2 -->
+    <div class="year-section" id="year2">
+      <h2>السنة الثانية متوسط</h2>
+      <h3>اللغة العربية</h3>
+      <div class="video"><iframe src="https://www.youtube.com/embed/A54vrJbFObk" allowfullscreen></iframe></div>
+      <h3>الرياضيات</h3>
+      <div class="video"><iframe src="https://www.youtube.com/embed/sBoBb7dQCSs" allowfullscreen></iframe></div>
+      <h3>الفيزياء</h3>
+      <div class="video"><iframe src="https://www.youtube.com/embed/8bn652I_MNI" allowfullscreen></iframe></div>
+    </div>
+
+    <!-- يمكنك إضافة السنة 3 و 4 بنفس الطريقة -->
+  </div>
+
+</div>
+
+<script>
+  function searchVideos() {
+    let input = document.getElementById("searchBox").value.toLowerCase();
+    let videos = document.querySelectorAll(".year-section");
+    videos.forEach(section => {
+      section.style.display = section.textContent.toLowerCase().includes(input) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>0
+
+<a href="../index.html" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #3498db; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">الرجوع إلى الرئيسية</a>
+
+0
+
